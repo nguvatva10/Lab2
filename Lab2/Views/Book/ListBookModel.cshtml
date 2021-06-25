@@ -7,6 +7,7 @@
 
 <h2>Danh Sach Book </h2>
 
+
 <table cellpadding="10" border="1">
     <thead>
         <tr>
@@ -23,7 +24,7 @@
                 Edit
             </th>
             <th>
-                Delete
+                Create
             </th>
 
         </tr>
@@ -34,26 +35,26 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Author)
+    </td>
 
-            <td>
-                <img src="@item.Imagecover" width="95" title="cover" />
-            </td>
-            <td>
-                <a href="/Book/EditBook/@item.Id" title="Edit Book">Edit </a>
-            </td>
-            <td>
-                <a href="/Book/DeleteBook/@item.Id" title="Delete Book">Delete </a>
-            </td>
+    <td>
+        <img src="@item.Imagecover" width="95" title="cover" />
+    </td>
+
+    <td>
+        <a href="/Book/EditBook/@item.Id" title="Edit Book">Edit </a>
+    </td>
+    <td>
+        <a href="/Book/CreateBook/@item.Id" title="Create Book">Create </a>
+    </td>
 
 
-        </tr>
-    }
+</tr>}
 
 </table>

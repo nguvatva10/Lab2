@@ -16,7 +16,7 @@ namespace Lab2
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "BookController", action = "ListBookModel", id = UrlParameter.Optional }
+                defaults: new { controller = "Book", action = "ListBookModel", id = UrlParameter.Optional }
             );
         }
     }
